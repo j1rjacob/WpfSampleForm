@@ -1,12 +1,13 @@
-﻿<Window x:Class="WpfAppForm.MainWindow"
+﻿<Controls:MetroWindow x:Class="WpfAppForm.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:WpfAppForm"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
+    <Grid Margin="0,10,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -18,29 +19,30 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="172*"></ColumnDefinition>
+            <ColumnDefinition Width="226*"></ColumnDefinition>
+            <ColumnDefinition Width="119*"/>
         </Grid.ColumnDefinitions>
         <TextBlock Text="Full Name"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Bottom"
-                   Margin="5"/>
+                   Margin="0,0,4,5"/>
         <TextBox Grid.Column="1"
                  Width="250"
                  Height="20"
                  HorizontalAlignment="Left"
                  VerticalAlignment="Bottom"
-                 Margin="5"/>
+                 Margin="5,0,0,5" Grid.ColumnSpan="2"/>
         <TextBlock Text="Sex"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Bottom"
-                   Margin="5"
+                   Margin="0,0,4,5"
                    Grid.Row="1"/>
         <StackPanel Orientation="Horizontal" 
                     Grid.Row="1" 
                     Grid.Column="1"
                     HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch">
+                    VerticalAlignment="Stretch" Grid.ColumnSpan="2">
             <RadioButton GroupName="Sex" 
                          Content="Male"
                          Margin="5"
@@ -52,11 +54,11 @@
         <TextBlock Text="Do you own"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Bottom"
-                   Margin="5"
+                   Margin="0,0,4,5"
                    Grid.Row="2"/>
         <StackPanel Orientation="Horizontal" 
                     Grid.Row="2" 
-                    Grid.Column="2" 
+                    Grid.Column="1" 
                     HorizontalAlignment="Left"
                     VerticalAlignment="Bottom">
             <CheckBox Content="Desktop"
@@ -69,13 +71,13 @@
         <TextBlock Text="Your job"
                        HorizontalAlignment="Right"
                        VerticalAlignment="Bottom"
-                       Margin="5"
+                       Margin="0,0,5,5"
                        Grid.Row="3"/>
         <ComboBox Grid.Row="3"
                       Grid.Column="1"
                       HorizontalAlignment="Left"
                       VerticalAlignment="Bottom"
-                      Margin="5">
+                      Margin="5,0,0,5">
             <ComboBoxItem Content="Programmer"/>
             <ComboBoxItem Content="Designer"/>
             <ComboBoxItem Content="Manager"/>
@@ -85,10 +87,10 @@
         <TextBlock Text="Promised Delivery Date"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Bottom"
-                   Margin="5"
+                   Margin="0,0,5,5"
                    Grid.Row="4"/>
         <Calendar Grid.Row="4"
                   Grid.Column="1"
-                  Margin="5"/>
+                  Margin="5" Grid.ColumnSpan="2"/>
     </Grid>
-</Window>
+</Controls:MetroWindow>
